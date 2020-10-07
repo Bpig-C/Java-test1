@@ -15,10 +15,12 @@ public int getAmount() {
 }
 public void setAmount(int amount) {
 	if(amount>160 && amount<1024)
-		this.amount = amount;
+        this.amount = amount;
 	else {System.out.println("The HardDisk amount was wrong!");
-	      this.amount=404000;
+	this.amount=404000;
 	}
+
+ }
 public int getReadSpeed() {
 	return readSpeed;
 }
@@ -26,7 +28,7 @@ public void setReadSpeed(int readSpeed) {
 	if(readSpeed>20 && readSpeed<600)
 		this.readSpeed=readSpeed;
 	else {System.out.println("The HardDisk readSpeed was wrong!");
-	        this.readSpeed=404000;
-	     }
+	    this.readSpeed=404000;
+	}
 }
 }
