@@ -3,9 +3,9 @@
 Java课程作业项目仓库
 # 阅读程序
 ## 实验目的
-1.掌握类的设计
-2.写出程序并初步学会调试
-3.利用GitHub平台写实验报告
+1.掌握类的设计  
+2.写出程序并初步学会调试  
+3.利用GitHub平台写实验报告  
 ## 实验过程
 >首先创建两个package：Information 和 Run。
 >>在Information 包中创建两个class：CPU 和 HardDisk。  
@@ -115,6 +115,8 @@ public class Test {
     }
 ```
 ## 实验结果
-![1](https://github.com/Bpig-C/Java-test1/blob/main/right.jpg)
+![CPU processor was wrong](https://i.loli.net/2020/10/07/WtJ8So3lCmbp7xk.jpg)
+![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/07/jxnRK9Ouy86GLAe.jpg)
+![The right result](https://i.loli.net/2020/10/07/ZOqQ5yrAfJTDN4B.jpg)
 ## 实验感想  
 通过本次实验
