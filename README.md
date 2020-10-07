@@ -115,8 +115,11 @@ public class Test {
     }
 ```
 ## 实验结果
-![CPU processor was wrong](https://i.loli.net/2020/10/07/WtJ8So3lCmbp7xk.jpg)
-![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/07/jxnRK9Ouy86GLAe.jpg)
-![The right result](https://i.loli.net/2020/10/07/ZOqQ5yrAfJTDN4B.jpg)
+Picture1.CPU processor was wrong：
+![CPU processor was wrong](https://i.loli.net/2020/10/07/WtJ8So3lCmbp7xk.jpg)  
+Picture2.CPU hertz and HarddDsk readSpeed were wrong：
+![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/07/jxnRK9Ouy86GLAe.jpg)  
+Picture3.The right result:
+![The right result](https://i.loli.net/2020/10/07/ZOqQ5yrAfJTDN4B.jpg)  
 ## 实验感想  
-通过本次实验
+通过本次实验，我学会并熟悉了如何创建类、方法和构造方法，用import来跨包调用类，以及基本的访问修饰符使用。实验中四个类组成的关系链让我充分熟悉类与类之间的关系，并不断调试程序和改善代码。除此以外，我还学会如何简单使用GitHub和markdown编辑实验报告。
