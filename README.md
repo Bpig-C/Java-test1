@@ -115,5 +115,6 @@ public class Test {
     }
 ```
 ## 实验结果
+![1](https://github.com/Bpig-C/Java-test1/blob/main/right.jpg)
 ## 实验感想  
 通过本次实验
