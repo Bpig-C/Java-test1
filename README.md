@@ -24,14 +24,96 @@ Java课程作业项目仓库
 
 ## 核心方法  
 1.方法1  
-···  
-···  
+```
+public void setSpeed(int m) {
+	if(m>1000 && m<3000)
+	speed=m;
+    else 
+    	{System.out.println("The CPU speed was wrong!");
+    	speed=404000;
+    	}
+}
+```
 2.方法2  
-···  
-···  
+```
+public void setProcessor(String m) {
+	if(m=="Intel" || m=="AMD")
+		processor=m;
+	    else 
+	    	{System.out.println("The CPU processor was wrong!");
+	    	processor="404000";
+	    	}
+	}
+``` 
 3.方法3  
-···  
-···
+```
+public void setHertz(double m) {
+	if(m>1.00 && m<4.00)
+		hertz=m;
+	    else 
+	    	{System.out.println("The CPU hertz was wrong!");
+	    	hertz=404000;
+	    	}
+}
+```
+4.方法4  
+```
+public CPU(int speed,String processor,double hertz) {
+	setSpeed(speed);
+	setProcessor(processor);
+	setHertz(hertz);
+}
+``` 
+5.方法5  
+```
+public void setAmount(int amount) {
+	if(amount>160 && amount<1024)
+        this.amount = amount;
+	else {System.out.println("The HardDisk amount was wrong!");
+	this.amount=404000;
+	}
+
+ }
+``` 
+6.方法6  
+```
+public void setReadSpeed(int readSpeed) {
+	if(readSpeed>20 && readSpeed<600)
+		this.readSpeed=readSpeed;
+	else {System.out.println("The HardDisk readSpeed was wrong!");
+	    this.readSpeed=404000;
+	}
+``` 
+7.方法7  
+```
+public HardDisk(int amount,int readSpeed) {
+	setAmount(amount);
+	setReadSpeed(readSpeed);
+}
+```
+8.方法8  
+``` 
+public PC(CPU cpu,HardDisk HD) {
+	setCPU(cpu);
+	setHardDisk(HD);
+}
+```
+9.方法9  
+``` 
+public class Test {
+
+   public static void main(String args[]) {
+
+       CPU cpu = new CPU(2200,"Intel",3.8);
+
+       HardDisk HD=new HardDisk(200,240);
+
+       PC pc =new PC(cpu,HD);
+
+       pc.show();
+
+    }
+```
 ## 实验结果
 ## 实验感想  
 通过本次实验
