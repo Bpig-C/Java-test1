@@ -6,25 +6,31 @@ import Information.HardDisk;
 public class PC {
 private HardDisk HD;
 private CPU cpu;
+private CPU recpu;
 public PC(){
 	
 }
-public PC(CPU cpu,HardDisk HD) {
+public PC(CPU cpu,CPU recpu,HardDisk HD) {
 	setCPU(cpu);
+	setRECPU(recpu);
 	setHardDisk(HD);
 }
 
-public void setCPU(CPU c) {
+private void setCPU(CPU c) {
 	cpu=c;
 }
-void setHardDisk(HardDisk h) {
+
+private void setRECPU(CPU c) {
+	recpu=c;
+}
+private void setHardDisk(HardDisk h) {
 	HD=h;
 }
 void show() {
 	System.out.println("The PC attribute(404000 means wrong!):");
-	System.out.println("CPU type is "+cpu.getProcessor()+".");
-	System.out.println("CPU speed is "+cpu.getSpeed()+" MB/s.");
-	System.out.println("CPU hertz is "+cpu.getHertz()+" GHZ.");
+	System.out.println("CPU type is "+recpu.getProcessor()+".");
+	System.out.println("CPU speed is "+cpu.getCentre()+" Centre.");
+	System.out.println("CPU hertz is "+recpu.getHertz()+" GHZ.");
 	System.out.println("HardDisk is "+HD.getAmount()+" G.");
 	System.out.println("HardDisk readspeed is "+HD.getReadSpeed()+" MB/s.");
 }

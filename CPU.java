@@ -1,19 +1,24 @@
 package Information;
 
 public class CPU {
-private int speed;
+private int centre;
 private String processor;
 private double hertz;
 public CPU(){
 
 }
-public CPU(int speed,String processor,double hertz) {
-	setSpeed(speed);
+
+public CPU(int centre) {
+	setCentre(centre);	
+}
+
+public CPU(String processor,double hertz) {
 	setProcessor(processor);
 	setHertz(hertz);
 }
-public int getSpeed() {
-	return speed;
+
+public int getCentre() {
+	return centre;
 }
 public String getProcessor() {
 	return processor;
@@ -21,12 +26,12 @@ public String getProcessor() {
 public double getHertz() {
 	return hertz;
 }
-public void setSpeed(int m) {
-	if(m>1000 && m<3000)
-	speed=m;
+public void setCentre(int m) {
+	if(m>4 && m<12)
+	centre=m;
     else 
-    	{System.out.println("The CPU speed was wrong!");
-    	speed=404000;
+    	{System.out.println("The CPU Centre was wrong!");
+    	centre=404000;
     	}
 }
 public void setProcessor(String m) {
