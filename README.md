@@ -7,34 +7,25 @@ Java课程作业项目仓库
 2.写出程序并初步学会调试  
 3.利用GitHub平台写实验报告  
 ## 实验过程
->首先创建两个package：Information 和 Run。
->>在Information 包中创建两个class：CPU 和 HardDisk。  
-    在Run 包中创建两个class：PC 和 Test。  
->>>在CPU类中创建三个private属性：speed、processor、hertz分别表示cpu的速度、处理器品牌和频率。  
-   并为三个属性定义三组方法（set-get）。 
-   创建一个默认构造方法（用来显示原来看不见的默认构造方法）。
-   和一个新的构造方法用以调用三个属性的set方法。  
->>>>在HardDisk类中创建两个private属性：amount和readSpeed分别表示硬盘的容量和读写速度。  
-   并为两个属性定义两组方法（set-get）。 
-   创建一个默认构造方法（用来显示原来看不见的默认构造方法）。
-   和一个新的构造方法用以调用两个属性的set方法。  
->>>>>在PC类中调用CPU类和HardDisk类，并分别建立新的属性cpu和HD。  
-然后创建show（）函数来展示所获取的信息。  
->>>>>>最后，在Test 创建主方法来为CPU和HardDisk中五个属性赋值，并调用PC类中show（）函数来输出信息。
+1.首先创建两个package：Information 和 Run。  
+2.在Information 包中创建两个class：CPU 和 HardDisk，并在Run 包中创建两个class：PC 和 Test。  
+3.CPU类中：
+*(a)在CPU类中创建三个private属性：speed、processor、hertz分别表示cpu的速度、处理器品牌和频率。    
+(b)并为三个属性定义三组方法（set-get）。   
+(c)创建一个默认构造方法（用来显示原来看不见的默认构造方法）。和一个新的构造方法用以调用三个属性的set方法。*    
+4.HardDisk类中：
+*(a)在HardDisk类中创建两个private属性：amount和readSpeed分别表示硬盘的容量和读写速度。    
+(b)并为两个属性定义两组方法（set-get）。   
+(c)创建一个默认构造方法（用来显示原来看不见的默认构造方法）。  
+(d)和一个新的构造方法用以调用两个属性的set方法。*    
+5.PC中：
+*(a)PC类中调用CPU类和HardDisk类，并分别建立新的属性cpu和HD。    
+(b)然后创建show（）函数来展示所获取的信息。*    
+6.最后在Test 创建主方法来为CPU和HardDisk中五个属性赋值，并调用PC类中show（）函数来输出信息。
 
 ## 核心方法  
-1.方法1  
-```
-public void setSpeed(int m) {
-	if(m>1000 && m<3000)
-	speed=m;
-    else 
-    	{System.out.println("The CPU speed was wrong!");
-    	speed=404000;
-    	}
-}
-```
-2.方法2  
+
+***1.方法（processor赋值方法，setspeed和sethertz赋值方法与此类似）***
 ```
 public void setProcessor(String m) {
 	if(m=="Intel" || m=="AMD")
@@ -45,18 +36,7 @@ public void setProcessor(String m) {
 	    	}
 	}
 ``` 
-3.方法3  
-```
-public void setHertz(double m) {
-	if(m>1.00 && m<4.00)
-		hertz=m;
-	    else 
-	    	{System.out.println("The CPU hertz was wrong!");
-	    	hertz=404000;
-	    	}
-}
-```
-4.方法4  
+***2.方法（CPU类中主构造方法）***  
 ```
 public CPU(int speed,String processor,double hertz) {
 	setSpeed(speed);
@@ -64,7 +44,7 @@ public CPU(int speed,String processor,double hertz) {
 	setHertz(hertz);
 }
 ``` 
-5.方法5  
+***3.方法（setamount赋值方法，setreadspeed赋值方法与此类似）***
 ```
 public void setAmount(int amount) {
 	if(amount>160 && amount<1024)
@@ -75,30 +55,21 @@ public void setAmount(int amount) {
 
  }
 ``` 
-6.方法6  
-```
-public void setReadSpeed(int readSpeed) {
-	if(readSpeed>20 && readSpeed<600)
-		this.readSpeed=readSpeed;
-	else {System.out.println("The HardDisk readSpeed was wrong!");
-	    this.readSpeed=404000;
-	}
-``` 
-7.方法7  
+***4.方法（HardDisk类中主构造方法）***
 ```
 public HardDisk(int amount,int readSpeed) {
 	setAmount(amount);
 	setReadSpeed(readSpeed);
 }
 ```
-8.方法8  
+***5.方法(PC类中主构造方法)***
 ``` 
 public PC(CPU cpu,HardDisk HD) {
 	setCPU(cpu);
 	setHardDisk(HD);
 }
 ```
-9.方法9  
+***6.方法(Test类中运行本程序主方法)***
 ``` 
 public class Test {
 
@@ -117,7 +88,7 @@ public class Test {
 ## 实验结果
 Picture1.CPU processor was wrong：
 ![CPU processor was wrong](https://i.loli.net/2020/10/07/WtJ8So3lCmbp7xk.jpg)  
-Picture2.CPU hertz and HarddDsk readSpeed were wrong：
+Picture2.CPU hertz and HarddDsk readSpeed were wrong： 
 ![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/07/jxnRK9Ouy86GLAe.jpg)  
 Picture3.The right result:
 ![The right result](https://i.loli.net/2020/10/07/ZOqQ5yrAfJTDN4B.jpg)  
