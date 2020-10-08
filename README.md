@@ -25,7 +25,7 @@ Java课程作业项目仓库
 
 ## 核心方法  
 
-***1.方法（processor赋值方法，setspeed和sethertz赋值方法与此类似）***
+***1.方法（processor赋值方法，setcentre和sethertz赋值方法与此类似）***
 ```
 public void setProcessor(String m) {
 	if(m=="Intel" || m=="AMD")
@@ -36,13 +36,17 @@ public void setProcessor(String m) {
 	    	}
 	}
 ``` 
-***2.方法（CPU类中主构造方法）***  
+***2.方法（CPU类中两个构造方法）***  
 ```
-public CPU(int speed,String processor,double hertz) {
-	setSpeed(speed);
+public CPU(int centre) {
+	setCentre(centre);	
+}
+
+public CPU(String processor,double hertz) {
 	setProcessor(processor);
 	setHertz(hertz);
 }
+
 ``` 
 ***3.方法（setamount赋值方法，setreadspeed赋值方法与此类似）***
 ```
@@ -55,7 +59,7 @@ public void setAmount(int amount) {
 
  }
 ``` 
-***4.方法（HardDisk类中主构造方法）***
+***4.方法（HardDisk类两个构造方法）***
 ```
 public HardDisk(int amount,int readSpeed) {
 	setAmount(amount);
@@ -64,6 +68,9 @@ public HardDisk(int amount,int readSpeed) {
 ```
 ***5.方法(PC类中主构造方法)***
 ``` 
+public HardDisk(){
+	
+}
 public PC(CPU cpu,HardDisk HD) {
 	setCPU(cpu);
 	setHardDisk(HD);
@@ -75,22 +82,26 @@ public class Test {
 
    public static void main(String args[]) {
 
-       CPU cpu = new CPU(2200,"Intel",3.8);
+       CPU cpu = new CPU(6);
+       
+       CPU recpu = new CPU("Intel",3.8);
 
-       HardDisk HD=new HardDisk(200,240);
+       HardDisk HD=new HardDisk(512,240);
 
-       PC pc =new PC(cpu,HD);
+       PC pc =new PC(cpu,recpu,HD);
 
        pc.show();
 
     }
+
+}
 ```
 ## 实验结果
 Picture1.CPU processor was wrong：
-![CPU processor was wrong](https://i.loli.net/2020/10/07/WtJ8So3lCmbp7xk.jpg)  
+![CPU processor was wrong](https://i.loli.net/2020/10/08/bH6dcI1jyV2mQoU.jpg)  
 Picture2.CPU hertz and HarddDsk readSpeed were wrong： 
-![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/07/jxnRK9Ouy86GLAe.jpg)  
+![CPU hertz and HarddDsk readSpeed were wrong](https://i.loli.net/2020/10/08/s1z3MkDolgILCJN.jpg)  
 Picture3.The right result:
-![The right result](https://i.loli.net/2020/10/07/ZOqQ5yrAfJTDN4B.jpg)  
+![The right result](https://i.loli.net/2020/10/08/3AUnRsKVHcXBldh.jpg)  
 ## 实验感想  
 通过本次实验，我学会并熟悉了如何创建类、方法和构造方法，用import来跨包调用类，以及基本的访问修饰符使用。实验中四个类组成的关系链让我充分熟悉类与类之间的关系，并不断调试程序和改善代码。除此以外，我还学会如何简单使用GitHub和markdown编辑实验报告。
