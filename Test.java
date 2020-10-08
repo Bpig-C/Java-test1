@@ -11,7 +11,7 @@ public class Test {
        
        CPU recpu = new CPU("Intel",3.8);
 
-       HardDisk HD=new HardDisk(200,240);
+       HardDisk HD=new HardDisk(512,240);
 
        PC pc =new PC(cpu,recpu,HD);
 
